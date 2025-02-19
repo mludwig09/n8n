@@ -18,6 +18,12 @@ jobs:
       with:
         node-version: '18.x'
 
+    - name: Install PNPM
+      run: npm install -g pnpm
+
+    - name: Install dependencies
+      run: pnpm install
+
     - name: Login to Azure
       uses: azure/login@v1
       with:
